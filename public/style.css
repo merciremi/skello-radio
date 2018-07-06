@@ -1,6 +1,15 @@
+body {
+  font-size: 16px;
+}
 a {
   text-decoration: none;
   color: inherit;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 20px;
+  border-left: 1px solid rgba(106,216,106,0.5);
 }
 
 .navbar {
@@ -37,14 +46,23 @@ article h2 {
 
 article p {
   font-family: monospace;
-  font-size: 16px;
   font-weight: normal;
   margin-top: 20px;
+}
+
+article a {
+  text-decoration: none;
+  color: white;
 }
 
 article a:hover {
   text-decoration: none;
   color: inherit;
+}
+
+article a:visited {
+  text-decoration: none;
+  color: white;
 }
 
 .post-photo img {
@@ -88,4 +106,22 @@ article a:hover {
   font-size: 16px;
   padding: 10px 10px;
   border-radius: 50px;
+}
+
+.comments {
+  padding-top: 30px;
+  font-family: monospace;
+  font-style: italic;
+}
+
+li:before {
+  content: ' 💬 "';
+}
+
+li:after {
+  content: '"';
+}
+
+.hidden {
+  visibility: hidden;
 }
