@@ -1,18 +1,40 @@
 <div class="container">
-  <% @database.each_with_index do |post, index| %>
-    <article>
-      <h2><%= post[:title] %></h2>
-      <p><%= post[:content].capitalize %></p>
-      <div class="kuddos">
-        <a href="" class='load-button'>Affichez <%= "#{@comments[index].count} #{@comments[index].count != 1 ? 'commentaires' : 'commentaire'}" %></a>
-        <div class="ratings">
-          <% if !post[:rating].nil? %>
-            <i class="fa fa-thumbs-up"></i>
-            <%= post[:rating] %>
-          <% end %>
+  <div class="row">
+    <% @database.each_with_index do |post, index| %>
+    <div class="col-xs-12">
+      <article>
+        <div class="row">
+          <div class="col-xs-12 col-md-3">
+            <div class="left-container">
+              <div class="post-photo">
+                <% if post[:photo].nil? %>
+                  <img src="#" alt="<%= post[:title] %>" class='post-photo green-placeholder'>
+                <% else %>
+                  <img src="<%= post[:photo] %>" alt="<%= post[:title] %>">
+                <% end %>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-md-9">
+            <div class="right-container">
+              <h2><%= post[:title] %></h2>
+              <p><%= post[:content].capitalize %></p>
+              <div class="kuddos">
+                <a href="" class='load-button'>Affichez <%= "#{@comments[index].count} #{@comments[index].count != 1 ? 'commentaires' : 'commentaire'}" %></a>
+                <div class="ratings">
+                  <% if !post[:rating].nil? %>
+                    <i class="fa fa-thumbs-up"></i>
+                    <%= post[:rating] %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
-      </div>
-    </article>
-    <hr>
-  <% end %>
+      </article>
+    </div>
+    <% end %>
+  </div>
 </div>
