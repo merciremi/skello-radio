@@ -21,13 +21,20 @@
               <h2><%= post[:title] %></h2>
               <p><%= post[:content].capitalize %></p>
               <div class="kuddos">
-                <a href="" class='load-button'>Affichez <%= "#{@comments[index].count} #{@comments[index].count != 1 ? 'commentaires' : 'commentaire'}" %></a>
+                <a href="" class="load-button">Affichez <%= "#{@comments[index].count} #{@comments[index].count != 1 ? 'commentaires' : 'commentaire'}" %></a>
                 <div class="ratings">
                   <% if !post[:rating].nil? %>
                     <i class="fa fa-thumbs-up"></i>
                     <%= post[:rating] %>
                   <% end %>
                 </div>
+              </div>
+              <div class="comments hidden">
+                <ul>
+                  <% @comments[index].each do |comment| %>
+                    <li><%= comment.capitalize %></li>
+                  <% end %>
+                </ul>
               </div>
             </div>
           </div>
