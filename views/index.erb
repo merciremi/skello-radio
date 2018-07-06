@@ -1,0 +1,6 @@
+<% @database.each do |post| %>
+  <article>
+    <h2><%= post[:title] %></h2> - <%= post[:rating] %>
+    <p><%= post[:content] %></p>
+  </article>
+<% end %>
