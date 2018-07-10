@@ -6,6 +6,8 @@ For example, ‘0x0f4’, ‘0acdadecf822eeff32aca5830e438cb54aa722e3’, ‘8BA
 
 >
 
+Not a clue. Typically, this is something I'd ask a teammate about. [I've found a Stackoverflow answer though](https://stackoverflow.com/questions/9221362/regular-expression-for-a-hexadecimal-number).
+
 2.Here is the pseudo code of a function that is defined recursively:
 -  f(0) = 1;
 -  f(1) = 3;
@@ -26,17 +28,54 @@ BACKEND - MySQL
 
 >
 
+CREATE TABLE Users (
+  id int,
+  firstname string,
+  lastname string,
+  gender string,
+  email string,
+  created_at datetime
+);
+
 2. Write a query on the previous table that lists the 10 most recently added users.
 
 >
+
+SELECT `id`
+FROM `users`
+ORDER BY `created_at` DESC
+LIMIT 10
 
 GENERAL - Creativity
 Si vous êtes Français, vous pouvez répondre en Français.
 
 1. Describe the color yellow to someone who is blind
 
->
+> Yellow tastes like ripe peaches, feels like the warmth of June morning sunshine on your eyelids, smells like fresh bread, sounds like [Mozart's Flute Concerto No. 1 in G major](https://www.youtube.com/watch?v=0ExqsbrOPN4).
 
 3. Describe the data model you’d use for a Battleship game. What are the key objects? How will your code use them?
 
 >
+- Users
+    * has_many :ships
+    * has_many :grids
+    * has_many :games through :battles
+- Grids
+  - (Inherit from Grids) Water grids
+  - (Inherit from Grids) Tracking grids
+    * belongs_to :user
+    * belongs_to :game
+- Ships
+  - (Inherit from Ships) Carriers
+  - (Inherit from Ships) Battleships
+  - (Inherit from Ships) Cruisers
+  - (Inherit from Ships) Submarines
+  - (Inherit from Ships) Destroyers
+    * belongs_to :user
+    * belongs_to :game
+- Battle
+  * belongs_to :user
+  * belongs_to :game
+- Games
+  * has_many :battles
+  * has_many :grids
