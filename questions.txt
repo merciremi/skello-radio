@@ -58,7 +58,8 @@ Si vous êtes Français, vous pouvez répondre en Français.
 
 3. Describe the data model you’d use for a Battleship game. What are the key objects? How will your code use them?
 
->
+> See data_model.png
+
 - Users
     * has_many :ships
     * has_many :grids
