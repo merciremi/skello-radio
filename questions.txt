@@ -16,6 +16,8 @@ Provide an implementation for ‘f’. Bonus points for a non recursive implemen
 
 >
 
+I've never found someone able to make me understand what a recursive function is and how it can be useful. Also something that would find its way in the Friday pair programming session.
+
 BACKEND - MySQL
 
 1. Write a CREATE TABLE query for a table storing information on users. It will store:
@@ -47,11 +49,12 @@ ORDER BY `created_at` DESC
 LIMIT 10
 
 GENERAL - Creativity
+
 Si vous êtes Français, vous pouvez répondre en Français.
 
 1. Describe the color yellow to someone who is blind
 
-> Yellow tastes like ripe peaches, feels like the warmth of June morning sunshine on your eyelids, smells like fresh bread, sounds like [Mozart's Flute Concerto No. 1 in G major](https://www.youtube.com/watch?v=0ExqsbrOPN4).
+> Yellow tastes like ripe peaches, feels like the warmth of June morning sunshine on your eyelids, smells like fresh bread out of the hoven, and sounds like [Mozart's Flute Concerto No. 1 in G major](https://www.youtube.com/watch?v=0ExqsbrOPN4).
 
 3. Describe the data model you’d use for a Battleship game. What are the key objects? How will your code use them?
 
