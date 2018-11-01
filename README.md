@@ -3,7 +3,7 @@ This is the technical test I did a while back for Skello. You'll find 2 parts to
 - Some technical questions
 - A Sinatra app
 
-*Sinatra app*
+**Sinatra app**
 
 This a takes a database of posts and comments to create a credible web application listing posts and comments. It was asked that the app must make intelligent use of the components of each post, and overall look like a real web app.
 
