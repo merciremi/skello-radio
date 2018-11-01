@@ -1,12 +1,13 @@
-You'll find 2 parts to this test:
+This is the technical test I did a while back for Skello. You'll find 2 parts to this test:
 
-**1/ Questions**
+- Some technical questions
+- A Sinatra app
 
-Take a look at questions.txt and answer the questions presented to you
+*Sinatra app*
 
-**2/ Sinatra Exercise**
+This a takes a database of posts and comments to create a credible web application listing posts and comments. It was asked that the app must make intelligent use of the components of each post, and overall look like a real web app.
 
-This is a fullstack exercise, creating a simple webapp in Sinatra
+My version has a minimalist backend, a Vanilla JS front-end, which served as a mobile to code some tests with Rspec. 
 
 Sinatra is a simple web framework for Ruby, similar in logic to Rails. It uses [erb](http://www.stuartellis.eu/articles/erb/), and can take routes with parameters.
 
@@ -16,18 +17,6 @@ Sinatra is a simple web framework for Ruby, similar in logic to Rails. It uses [
 
 *Don't forget to run ```gem install sinatra``` && ```gem install sinatra-contrib``` in order to run the program*
 
-In this simple exercise, a database of posts and comments is given to you (see Database.rb). Comments are ordered to match each post (first comment array - first post, etc.).
+*Dont forget to run ```gem install rack-test``` && ```gem install rspec``` before running the tests.*
 
-Your goal is to create a credible web application listing posts and comments. The app must make intelligent use of the components of each post, and overall look like a real web app. The rest is completely up to you.
-
-This is a test of your front-end, back-end capabilities, as well as your creativity. We will be looking for:
-
-- A clean backend code
-
-- A professional-looking front-end
-
-- A surprising feature: something we wouldn't have thought about.
-
-Overall, we're just looking for you to surprise us!
-
-*Any questions ? [samy@skello.io](mailto:samy@skello.io)*
+*Any questions ? [Ask me on Twitter!](https://twitter.com/mercier_remi)*
